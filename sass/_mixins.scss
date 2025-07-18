@@ -1,0 +1,24 @@
+@use 'sass:color';
+@use 'variaveis';
+ 
+// Mixin para botões básicos
+@mixin botao-basico($bg: variaveis.$cor-primaria, $cor-texto: variaveis.$cor-branca){
+    background-color: $bg;
+    color: $cor-texto;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: variaveis.$raio-borda;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover{
+        background-color: color.adjust($bg, $lightness: -10%);
+    }
+}
+
+//Mixin para responsividade com breakpoint
+@mixin responsivo($breakpoint){
+    @media (max-width: $breakpoint){
+        @content;
+    }
+}

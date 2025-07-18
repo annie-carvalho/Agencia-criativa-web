@@ -1,13 +1,13 @@
-
-/*Variáveis de cor*/
+/* === Variaveis ===*/
 :root{
-    --cor-primaria: #6a11cb;
-    --cor-primaria-dark: #4e0dad;
-    --cor-fundo: #f9f9f9;
-    --cor-texto: #333;
-    --cor-branca: #fff;
-    --cor-escura: #1e1e1e;
+--cor-primaria: #6a11cb;
+--cor-secundaria: #2575fc;
+--cor-fundo: #f9f9f9;
+--cor-texto: #333;
+--cor-branca: #fff;
+--cor-escura: #1e1e1e;   
 }
+
 
 /* === Reset e configuração gerais === */
 *,
@@ -217,7 +217,7 @@ body{
 .contato__campo,
 .contato__mensagem{
     padding: 1rem;
-    font-size: 1.6;
+    font-size: 1.6rem;
     border: 1px solid #ccc;
     border-radius: 0.5rem;
 }
@@ -237,7 +237,7 @@ body{
     background-color: var(--cor-primaria-dark);
 }
 
-/* === Footer === */
+/* === Rodapé === */
 .footer{
     text-align: center;
     padding: 2rem 0;

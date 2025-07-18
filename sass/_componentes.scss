@@ -1,0 +1,144 @@
+@use 'variaveis';
+@use 'mixins';
+
+// === Banner (Home)
+.home{
+        position: relative;
+        overflow: hidden;
+
+        &__banner{
+            width: 100%;
+            height: auto;
+            display: block;
+    }
+
+        &__conteudo{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: variaveis.$cor-escura;
+            padding: variaveis.$espacamento;
+            background-color: rgba(0,0,0,0.06); 
+            border-radius: 1.2rem;
+            max-width: 90%;
+    }
+
+        &__titulo{
+            font-size: 3.2rem;
+            margin-bottom: 1rem;
+}
+
+        &__texto{
+            font-size: 1.8rem;
+            line-height: 1.4;
+    }
+}
+
+// === Sobre nós ===
+    .sobre{
+            text-align: center;
+            padding: 4rem 0;
+
+        &__titulo{
+            color: variaveis.$cor-texto;
+            margin-bottom: variaveis.$espacamento;
+            font-size: 2.4rem;
+    }
+
+    &__descricao{
+            font-size: 1.6rem;
+            max-width: 70ch;
+            margin: 0 auto;
+            line-height: 1.6;
+    }
+}
+// === Cards de Serviços ===
+    .servicos{
+            padding: 4rem 0;
+
+    &__titulo{
+            text-align: center;
+            font-size: 2.4rem;
+            color: variaveis.$cor-texto;
+            margin-bottom: 3rem;
+        }
+
+    &__grid{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+            gap: 2rem;
+        }
+
+    &__card{
+            background-color: variaveis.$cor-branca;
+            padding: variaveis.$espacamento;
+            border-radius: variaveis.$raio-borda;
+            box-shadow: variaveis.$sombra-leve;
+            
+    &:hover{
+            transform: translateY(-0.5rem);
+        }
+    }
+}
+
+// ===Depoimentos ===
+    .depoimentos{
+            padding: 4rem 0;
+            text-align: center;
+            background-color: variaveis.$cor-branca;
+
+    &__titulo{
+            font-size: 2.4rem;
+            margin-bottom: 3rem;
+            color: variaveis.$cor-texto; 
+        }
+
+    &__comentarios{
+            font-style: italic;
+            margin: 0 auto 2rem;
+            padding: 1.5rem;
+            border-left: 4px solid variaveis.$cor-primaria;
+            background-color: #fff; 
+            max-width: 70ch;
+            box-shadow: variaveis.$sombra-leve;  
+    }
+}
+
+// === Contato === 
+    .contato{
+            padding: 4rem 0;
+
+    &__titulo{
+            text-align: center;
+            font-size: 2.4rem;
+            margin-bottom: 2rem;
+        }
+
+    &__info{
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 1.6rem;
+        }
+
+    &__formulario{
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin: 0 auto;
+            max-width: 50rem;
+        }
+
+    &__campo,
+    &__mensagem{
+            padding: 1rem;
+            font-size: 1.6rem;
+            border: 1px solid #ccc;
+            border-radius: 0.5rem;
+        }
+
+    &__botao{
+        @include mixins.botao-basico();
+    }
+}

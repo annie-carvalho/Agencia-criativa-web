@@ -1,0 +1,25 @@
+// === Função math.div() === //
+@use 'sass:math';
+
+// === Cores === //
+$cor-primaria: #6a11cb;
+$cor-secundaria: #2575fc;
+$cor-fundo: #f9f9f9;
+$cor-texto: #333;
+$cor-branca: #fff;
+$cor-escura: #1e1e1e;
+
+// === Tipografia === //
+$fonte-padrao: 'Segoe UI', sans-serif;
+$tamanho-base: 1.6rem;
+
+// === Espaçamento === //
+$espacamento: 2rem;
+$espacamento-pequeno: math.div($espacamento, 2);
+$espacamento-grande: $espacamento *2;
+
+// === Bordas === //
+$raio-borda: 1rem;
+
+// === Sobra === //
+$sombra-leve: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);

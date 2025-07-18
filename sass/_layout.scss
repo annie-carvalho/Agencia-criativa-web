@@ -1,0 +1,70 @@
+//Estrutura da página
+@use 'variaveis';
+@use 'mixins';
+
+//Layout principal
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: variaveis.$espacamento;
+    background-color: variaveis.$cor-escura;
+    color: variaveis.$cor-branca; 
+}   
+
+    .header__logo img{
+        height: 6rem;
+        width: auto;
+    }
+
+    .header__nav{
+        display: flex;
+         }
+
+    .header__toggle{
+        background: none;
+        border: none;
+        color: variaveis.$cor-branca;
+        font-size: 2.4rem;
+        cursor: pointer;
+        display: none;
+        }
+
+    .header__menu{
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+    }
+
+    .header__menu-link{
+        text-decoration: none;
+        color: variaveis.$cor-branca;
+        font-weight: 500;
+        transition: color 0.3s ease;
+        }
+
+    .header__menu-item{
+        list-style: none;
+
+    &:hover{
+        color: variaveis.$cor-primaria;
+        }
+    }
+
+.footer{
+    text-align: center;
+    padding: variaveis.$espacamento;
+    background-color: variaveis.$cor-escura;
+    color: #ccc;
+   }
+
+   @include mixins.responsivo(768px){
+    .header__toggle{
+        display: block;
+    }
+
+    .header__nav{
+        display: none;
+    }
+   }

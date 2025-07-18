@@ -1,0 +1,25 @@
+//Reset e estilos globais
+@use 'variaveis';
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%; /*1rem = 10px*/
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+body{
+    font-family: variaveis.$fonte-padrao;
+    font-size: variaveis.$tamanho-base;
+    background-color: variaveis.$cor-fundo;
+    color: variaveis.$cor-texto;
+    line-height: 1.6;
+    height: 100%;
+}
